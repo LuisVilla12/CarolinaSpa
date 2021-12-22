@@ -1,6 +1,7 @@
-@use 'variables' as v; 
+@use 'variables' as v;
 
 /** Media Queries **/
+
 @mixin telefono {
     @media (min-width: v.$telefono) {
         @content;
@@ -12,13 +13,12 @@
         @content;
     }
 }
-  
+
 @mixin desktop {
     @media (min-width: v.$desktop) {
         @content;
     }
 }
-
 
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
@@ -33,7 +33,6 @@
     text-transform: uppercase;
     transition: background-color;
     transition-duration: 300ms;
-
     @include tablet {
         width: auto;
     }
@@ -42,8 +41,23 @@
     }
 }
 
-@mixin grid($columnas, $espaciado ) {
+@mixin grid($columnas, $espaciado) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin tituloCursiva {
+    text-align: center;
+    color: v.$secundario;
+    font-family: v.$fuenteCursiva;
+    font-weight: 400;
+    line-height: .7;
+    font-size: 4.5rem;
+    span {
+        color: v.$negro;
+        font-family: v.$fuentePrincipal;
+        display: block;
+        text-transform: uppercase;
+    }
 }
