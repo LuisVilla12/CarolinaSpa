@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.horarios {
+    &__grid {
+        background-image: linear-gradient();
+    }
+    &__contenido {}
+    &__heading {
+        color: v.$gris;
+        font-weight: 100;
+    }
+    &__descripcion {
+        text-align: justify;
+    }
+}
