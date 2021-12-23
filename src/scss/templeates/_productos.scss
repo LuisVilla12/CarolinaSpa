@@ -6,11 +6,25 @@
         margin-bottom: 3rem;
     }
     &__grid {
-        @include m.grid(4, 2rem);
+        display: grid;
+        grid-template-columns: repeat(8, 30rem);
+        column-gap: 3rem;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        @include m.telefono {
+            grid-template-columns: repeat(2, 1fr);
+            overflow-x: hidden;
+        }
+        @include m.tablet {
+            grid-template-columns: repeat(3, 1fr);
+            overflow-x: hidden;
+        }
     }
 }
 
 .producto {
+    scroll-snap-align: center;
     background-color: v.$blanco;
     &__contenido {
         padding: 2rem;
