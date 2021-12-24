@@ -1,0 +1,30 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.footer {
+    margin-top: 4rem;
+    &__grid {
+        @include m.tablet {
+            @include m.grid(3, 2rem);
+        }
+    }
+    h3 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+    .hora,
+    .direccion {
+        text-align: center;
+    }
+    .copy {
+        background-color: v.$primario;
+        p {
+            text-align: center;
+            font-weight: bold;
+            padding: 2rem;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+}
