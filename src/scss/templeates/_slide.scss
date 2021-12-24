@@ -20,7 +20,16 @@
 .swiper {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-size: cover;
+    width: 50rem;
+    max-height: 27rem;
+    @include m.tablet {
+        width: unset;
+        max-height: unset;
+    }
 }
 
 .swiper-slide img {
