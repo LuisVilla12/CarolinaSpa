@@ -18,6 +18,6 @@ window.swiper = new Swiper({
     pagination: {
         el: '.slider__paginacion',
     },
+    // Flechitas
     navigation: true
-
 });
